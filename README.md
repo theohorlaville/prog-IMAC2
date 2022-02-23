@@ -1,7 +1,9 @@
-Listes des cours vus et assimilés :
-(+ remarques si besoin)
+Listes des cours vus et assimilés et des exercices finis
 
-Leçon 1 :
+:sparkles: Exercices terminés : :sparkles:
+   - Guess_the_number
+
+Level 1 :
 
    - Install a compiler
    - Use an IDE
