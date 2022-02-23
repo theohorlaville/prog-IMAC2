@@ -3,6 +3,7 @@ Listes des cours vus et assimilés et des exercices finis
 :sparkles: Exercices terminés : :sparkles:
    - Guess_the_number
 
+:fire:Leçons : :fire:
 Level 1 :
 
    - Install a compiler
