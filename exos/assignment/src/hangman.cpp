@@ -1,4 +1,5 @@
 #include "includes/hangman.hpp"
+#include <algorithm>
 #include <array>
 #include <iostream>
 #include <random>
@@ -24,7 +25,7 @@ const std::string rand_word()
     return word_to_guess;
 }
 
-bool player_alive(const int number_of_lives)
+bool player_alive(const int& number_of_lives)
 {
     if (number_of_lives == 0)
         return false;
@@ -34,15 +35,10 @@ bool player_alive(const int number_of_lives)
 
 bool player_won(const std::vector<bool>& letters_guessed)
 {
-    bool state = true;
-    for (size_t i = 0; i < letters_guessed.size(); i++) {
-        if (letters_guessed[i] == false)
-            state = false;
-    }
-    return state;
+    return std::all_of(letters_guessed.begin(), letters_guessed.end(), [](bool state) { return state; });
 }
 
-void show_number_lives(int& number_of_lives)
+void show_number_lives(const int& number_of_lives)
 {
     std::cout << "Il vous reste " << number_of_lives << " vies" << std::endl;
 }
@@ -72,7 +68,7 @@ void remove_one_life(int& number_of_lives)
     number_of_lives -= 1;
 }
 
-bool word_to_guess_contains(char letter, std::string word_to_guess)
+bool word_to_guess_contains(const char& letter, const std::string& word_to_guess)
 {
     if (word_to_guess.find(letter) > word_to_guess.size() - 1)
         return false;
@@ -80,7 +76,7 @@ bool word_to_guess_contains(char letter, std::string word_to_guess)
         return true;
 }
 
-void marks_as_guessed(char guess, std::vector<bool>& letters_guessed, std::string word_to_guess)
+void marks_as_guessed(const char& guess, std::vector<bool>& letters_guessed, const std::string& word_to_guess)
 {
     for (size_t i = 0; i < letters_guessed.size(); i++) {
         if (word_to_guess[i] == guess) {
