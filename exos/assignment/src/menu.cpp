@@ -7,8 +7,7 @@
 void display_menu()
 {
     display_menu_options();
-    char user_choice = get_input_from_user<char>();
-    start_game(user_choice);
+    start_game();
 }
 
 void display_menu_options()
@@ -19,8 +18,10 @@ void display_menu_options()
     std::cout << "2: play Hangman" << std::endl;
 }
 
-void start_game(const char user_choice)
+void start_game()
 {
+    char user_choice = get_input_from_user<char>();
+
     switch (user_choice) {
     case 'q':
         break;
@@ -33,6 +34,7 @@ void start_game(const char user_choice)
         break;
 
     default:
-        break;
+        std::cout << "Oups, wrong command, try something else !" << std::endl;
+        start_game();
     }
 }
