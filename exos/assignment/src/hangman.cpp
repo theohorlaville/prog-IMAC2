@@ -53,12 +53,12 @@ void show_word_to_guess_with_missing_letters(const std::string& word_to_guess, c
     }
     std::cout << std::endl;
 }
-void show_congrats_message(const std::string word_to_guess)
+void show_congrats_message(const std::string& word_to_guess)
 {
     std::cout << " Félicitation vous avez trouvé le mot qui est : " << word_to_guess << std::endl;
 }
 
-void show_grosloozer_message(const std::string word_to_guess)
+void show_grosloozer_message(const std::string& word_to_guess)
 {
     std::cout << " Oups vous avez perdu, le mot à trouver était : " << word_to_guess << std::endl;
 }

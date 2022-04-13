@@ -1,10 +1,8 @@
 #include <iostream>
-#include "includes/guess_the_number.hpp"
-#include "includes/hangman.hpp"
+#include <vector>
+#include "includes/menu.hpp"
 
 int main()
 {
-    //play_guess_the_number();
-    std::cout << "Maintenant, jouons à un autre jeu !" << std::endl;
-    play_hangman();
+    display_menu();
 }
