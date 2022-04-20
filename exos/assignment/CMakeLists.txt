@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.20)
 
 project(SimpleCpp)
 add_executable(${PROJECT_NAME})
@@ -19,3 +19,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 file(GLOB_RECURSE MY_SOURCES CONFIGURE_DEPENDS src/*)
 target_sources(${PROJECT_NAME} PRIVATE ${MY_SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE src/includes)
+
+# ---Add p6---
+add_subdirectory(p6)
+target_link_libraries(${PROJECT_NAME} p6::p6)
