@@ -1,4 +1,4 @@
-# Listes des cours vus et assimilés et des exercices finis
+# Liste des cours vus et assimilés et des exercices finis
 
 :sparkles: Exercices terminés : :sparkles:
    - Guess_the_number
@@ -19,7 +19,7 @@
    - Stack vs Heap
    - Consistency in style
 
-## Level 2 :
+## Level 2 :
 
    - Make it work, then make it good
    - Prefer free functions
